@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Changa", sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(158, 163, 27);
+  background: linear-gradient(90deg, rgba(158, 163, 27, 1) 10%, rgba(21, 38, 221, 1) 35%, rgba(33, 146, 150, 1) 66%);
+}
+
+.container {
+  position: relative;
+  background-color: white;
+  width: 30vw;
+  height: 80vh;
+  margin: 100px auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.headline {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.fill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(220, 9%, 94%);
+  border-radius: 30px;
+}
+
+#input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 12px;
+  background-color: #edeef0;
+  border-radius: 30px;
+}
+
+#button {
+  border: none;
+  outline: none;
+  background-color: rgb(255, 172, 28);
+  width: 80px;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+#button:hover {
+  background-color: grey;
+  color: white;
+}
+
+#result {
+  margin-top: 1.8rem;
+  margin-left: 2.9rem;
+  font-size: 17px;
+  list-style: none;
+}
+
+ul li {
+  padding: 10px 0px;
+  cursor: pointer;
+  user-select: none;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 20px;
+}
+
+ul li.checked {
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(images/checked.png);
+  background-size: cover;
+  background-position: center;
+  left: 20px;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5;
+  left: 10;
+  width: 50px;
+  height: 30px;
+  font-size: 21px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+ul li span:hover {
+  background-color: grey;
+}
+
+/* hp */
+@media (max-width: 768px) {
+  .container {
+    width: 70%;
+    margin: 30px auto;
+  }
+
+  #button {
+    padding: 10px 15px;
+  }
+
+  #result {
+    margin-left: 2.9rem;
+  }
+
+  ul li::before {
+    width: 30px;
+    height: 30px;
+    left: 17px;
+  }
+
+  ul li {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 40%;
+  }
+
+  #button {
+    padding: 10px 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 30%;
+  }
+}
