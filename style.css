@@ -126,7 +126,7 @@ ul li span:hover {
   }
 
   #button {
-    padding: 10px 15px;
+    padding: 0.6rem 0.1rem;
   }
 
   #result {
@@ -134,13 +134,13 @@ ul li span:hover {
   }
 
   ul li::before {
-    width: 30px;
-    height: 30px;
+    width: 1.6rem;
+    height: 1.6rem;
     left: 17px;
   }
 
   ul li {
-    font-size: 17px;
+    font-size: 1.1rem;
   }
 }
 

@@ -3,11 +3,8 @@ const result = document.getElementById("result");
 const button = document.getElementById("button");
 
 button.addEventListener("click", function add() {
-  let liCount = document.getElementsByTagName("li").length;
   if (inputBox.value == "") return alert("Ketik sesuatu dong!! yang benar aje!");
-  else if (liCount >= 6) {
-    alert("Banyak banget kegiatan lu cuy");
-  } else {
+  else {
     let li = document.createElement("li");
     li.innerHTML = inputBox.value;
     result.appendChild(li);
